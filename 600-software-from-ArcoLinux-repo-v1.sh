@@ -20,13 +20,13 @@ echo
 
 sudo pacman -S arcolinux-arc-themes-git --noconfirm --needed
 sudo pacman -S arcolinux-awesome-git --noconfirm --needed
-#sudo pacman -S arcolinux-common-git --noconfirm --needed
+sudo pacman -S arcolinux-common-git --noconfirm --needed
 sudo pacman -S arcolinux-config-git --noconfirm --needed
 #sudo pacman -S arcolinux-conky-collection-git --noconfirm --needed
-#sudo pacman -S arcolinux-docs-git --noconfirm --needed
+sudo pacman -S arcolinux-docs-git --noconfirm --needed
 #sudo pacman -S arcolinux-geany-git --noconfirm --needed
 #sudo pacman -S arcolinux-i3wm-git --noconfirm --needed
-#sudo pacman -S arcolinux-local-git --noconfirm --needed
+sudo pacman -S arcolinux-local-git --noconfirm --needed
 sudo pacman -S arcolinux-neofetch-git --noconfirm --needed
 #sudo pacman -S arcolinux-nitrogen-git --noconfirm --needed
 sudo pacman -S arcolinux-oblogout-themes-git --noconfirm --needed
@@ -40,11 +40,11 @@ sudo pacman -S arcolinux-oblogout-themes-git --noconfirm --needed
 sudo pacman -S arcolinux-rofi-git --noconfirm --needed
 #sudo pacman -S arcolinux-rofi-themes-git --noconfirm --needed
 sudo pacman -S arcolinux-root-git --noconfirm --needed
-sudo pacman -S arcolinux-slimlock-themes-git --noconfirm --needed
+#sudo pacman -S arcolinux-slimlock-themes-git --noconfirm --needed
 sudo pacman -S arcolinux-termite-themes-git --noconfirm --needed
 #sudo pacman -S arcolinux-tint2-git --noconfirm --needed
 #sudo pacman -S arcolinux-tint2-themes-git --noconfirm --needed
-sudo pacman -S arcolinux-variety-git --noconfirm --needed
+#sudo pacman -S arcolinux-variety-git --noconfirm --needed
 sudo pacman -S arcolinux-wallpapers-git --noconfirm --needed
 sudo pacman -S arcolinux-xfce-thunar-git --noconfirm --needed
 

@@ -25,9 +25,9 @@ echo "Installing category Accessories"
 
 #sh AUR/install-caffeine-ng-v*.sh
 #sh AUR/install-conky-lua-archers-v*.sh
-sh AUR/install-cool-retro-term-v*.sh
-sh AUR/install-mintstick-git-v*.sh
-sh AUR/install-temps-v*.sh
+#sh AUR/install-cool-retro-term-v*.sh
+#sh AUR/install-mintstick-git-v*.sh
+#sh AUR/install-temps-v*.sh
 
 echo "Installing category Development"
 
@@ -46,7 +46,7 @@ sh AUR/install-font-manager-v*.sh
 
 echo "Installing category Internet"
 
-sh AUR/install-dropbox-v*.sh
+#sh AUR/install-dropbox-v*.sh
 #sh AUR/install-insync-v*.sh
 #sh AUR/install-skypeforlinux-stable-bin-v*.sh
 sh AUR/install-google-chrome-v*.sh
