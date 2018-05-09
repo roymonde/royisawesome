@@ -18,7 +18,7 @@ set -e
 echo "Installing category Accessories"
 
 sudo pacman -S --noconfirm --needed catfish
-sudo pacman -S --noconfirm --needed cmatrix
+#sudo pacman -S --noconfirm --needed cmatrix
 #sudo pacman -S --noconfirm --needed galculator
 #sudo pacman -S --noconfirm --needed gnome-screenshot
 #sudo pacman -S --noconfirm --needed plank
@@ -41,7 +41,7 @@ echo "Installing category Education"
 
 echo "Installing category Games"
 
-#sudo pacman -S --noconfirm --needed
+sudo pacman -S --noconfirm --needed wine-staging
 
 echo "Installing category Graphics"
 
