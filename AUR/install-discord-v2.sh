@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 ##################################################################################################################
-# Author 	: 	Erik Dubois
-# Website : https://www.erikdubois.be
+# Author	:	Erik Dubois
+# Website	:	https://www.erikdubois.be
 # Website	:	https://www.arcolinux.info
 # Website	:	https://www.arcolinux.com
 # Website	:	https://www.arcolinuxd.com
@@ -13,9 +13,9 @@ set -e
 #
 ##################################################################################################################
 
-sudo pacman -S --noconfirm --needed virtualbox-host-modules-arch
+yaourt -S libc++ --m-arg --nocheck --noconfirm --m-arg --skipinteg
 
-package="virtualbox"
+package="discord"
 
 #----------------------------------------------------------------------------------
 
@@ -32,8 +32,8 @@ else
 	if pacman -Qi yaourt &> /dev/null; then
 
 		echo "Installing with yaourt"
-		yaourt -S --noconfirm $package
-		
+		yaourt -S --noconfirm --m-arg --skippgpcheck $package
+
 	elif pacman -Qi pacaur &> /dev/null; then
 
 		echo "Installing with pacaur"
@@ -62,10 +62,3 @@ else
 	fi
 
 fi
-
-
-
-
-echo "################################################################"
-echo "#########           You got to reboot.                 #########"
-echo "################################################################"

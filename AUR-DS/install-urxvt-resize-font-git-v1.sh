@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 ##################################################################################################################
+# Author	:	Nick Petrov
+# Author	:	Kevin Yanez
 # Author	:	Erik Dubois
 # Website	:	https://www.erikdubois.be
 # Website	:	https://www.arcolinux.info
@@ -13,7 +15,7 @@ set -e
 #
 ##################################################################################################################
 
-package="skypeforlinux-stable-bin"
+package="urxvt-resize-font-git"
 
 #----------------------------------------------------------------------------------
 

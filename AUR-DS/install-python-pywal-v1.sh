@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 ##################################################################################################################
-# Author 	: 	Erik Dubois
-# Website : https://www.erikdubois.be
+# Author	:	Erik Dubois
+# Website	:	https://www.erikdubois.be
 # Website	:	https://www.arcolinux.info
 # Website	:	https://www.arcolinux.com
 # Website	:	https://www.arcolinuxd.com
@@ -13,11 +13,7 @@ set -e
 #
 ##################################################################################################################
 
-sudo pacman -S --noconfirm --needed virtualbox-host-dkms
-sudo pacman -S --noconfirm --needed linux-headers
-sudo pacman -S --noconfirm --needed linux-lts-headers
-
-package="virtualbox"
+package="python-pywal"
 
 #----------------------------------------------------------------------------------
 
@@ -35,7 +31,7 @@ else
 
 		echo "Installing with yaourt"
 		yaourt -S --noconfirm $package
-		
+
 	elif pacman -Qi pacaur &> /dev/null; then
 
 		echo "Installing with pacaur"
@@ -64,9 +60,3 @@ else
 	fi
 
 fi
-
-
-
-echo "################################################################"
-echo "#########           You got to reboot.                 #########"
-echo "################################################################"

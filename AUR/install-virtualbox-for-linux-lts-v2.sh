@@ -13,25 +13,11 @@ set -e
 #
 ##################################################################################################################
 
-
-########################################
-########        C O N K Y      #########
-########################################
-
-
-echo "################################################################"
-echo "Downloading the files from github to tmp directory"
-
-rm -rf /tmp/aureola
-
-git clone https://github.com/erikdubois/Aureola /tmp/aureola
-
-# if there is already a folder in tmp, delete or else do nothing
-[ -d ~/.aureola ] && rm -rf ~/.aureola
-mv -f /tmp/aureola ~/.aureola
-
-rm -rf /tmp/aureola
+sudo pacman -S --noconfirm --needed virtualbox
+sudo pacman -S --needed virtualbox-host-dkms
+sudo pacman -S --noconfirm --needed linux-lts-headers
+sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 echo "################################################################"
-echo "###################    aureola installed  ######################"
+echo "#########           You got to reboot.                 #########"
 echo "################################################################"

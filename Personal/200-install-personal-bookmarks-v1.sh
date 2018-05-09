@@ -13,25 +13,12 @@ set -e
 #
 ##################################################################################################################
 
+echo "Copy bookmarks"
 
-########################################
-########        C O N K Y      #########
-########################################
+[ -d $HOME"/.config/gtk-3.0" ] || mkdir -p $HOME"/.config/gtk-3.0"
 
-
-echo "################################################################"
-echo "Downloading the files from github to tmp directory"
-
-rm -rf /tmp/aureola
-
-git clone https://github.com/erikdubois/Aureola /tmp/aureola
-
-# if there is already a folder in tmp, delete or else do nothing
-[ -d ~/.aureola ] && rm -rf ~/.aureola
-mv -f /tmp/aureola ~/.aureola
-
-rm -rf /tmp/aureola
+cp -r settings/bookmarks/* ~/.config/gtk-3.0/
 
 echo "################################################################"
-echo "###################    aureola installed  ######################"
+echo "#########      bookmarks  copied                ################"
 echo "################################################################"

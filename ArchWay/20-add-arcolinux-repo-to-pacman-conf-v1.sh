@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+#set -e
 ##################################################################################################################
 # Author	:	Erik Dubois
 # Website	:	https://www.erikdubois.be
@@ -13,25 +13,14 @@ set -e
 #
 ##################################################################################################################
 
+echo '#[arcolinux_repo_testing]
+#SigLevel = Required DatabaseOptional
+#Server = https://arcolinux.github.io/arcolinux_repo_testing/$arch
 
-########################################
-########        C O N K Y      #########
-########################################
-
-
-echo "################################################################"
-echo "Downloading the files from github to tmp directory"
-
-rm -rf /tmp/aureola
-
-git clone https://github.com/erikdubois/Aureola /tmp/aureola
-
-# if there is already a folder in tmp, delete or else do nothing
-[ -d ~/.aureola ] && rm -rf ~/.aureola
-mv -f /tmp/aureola ~/.aureola
-
-rm -rf /tmp/aureola
+[arcolinux_repo]
+SigLevel = Required DatabaseOptional
+Server = https://arcolinux.github.io/arcolinux_repo/$arch' | sudo tee --append /etc/pacman.conf
 
 echo "################################################################"
-echo "###################    aureola installed  ######################"
+echo "###                  arcolinux repo added                   ####"
 echo "################################################################"

@@ -121,6 +121,7 @@ local netflix           = "/opt/google/chrome/google-chrome --profile-directory=
 local iplayer           = "/opt/google/chrome/google-chrome --profile-directory=Default --app-id=jahnifecgkhjbcbjfkplnplfkcebgafc"
 local od                = "/opt/google/chrome/google-chrome --profile-directory=Default --app-id=eanfgpighcjbbcjnhajepfhfihacoakb"
 local google            = "google-chrome-stable"
+local guitar            = "/opt/google/chrome/google-chrome --profile-directory=Default --app-id=ooagjdegedkpoodebbmjdgfkfeabbkpp"
 
 -- awesome variables
 awful.util.terminal = terminal
@@ -426,6 +427,8 @@ globalkeys = my_table.join(
         {description = "bluetooth", group = "altkey"}),
     awful.key({ altkey }, "Return", function () awful.util.spawn( terminal ) end,
         {description = "terminal", group = "altkey"}),
+    awful.key({ altkey }, "u", function () awful.util.spawn( guitar ) end,
+        {description = "ultimate guitar", group = "altkey"}),
 
     -- screenshots
     awful.key({ }, "Print", function () awful.util.spawn("scrot 'ArcoLinuxD-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'") end,

@@ -13,25 +13,10 @@ set -e
 #
 ##################################################################################################################
 
-
-########################################
-########        C O N K Y      #########
-########################################
-
+#sudo pacman-key --keyserver hkp://pool.sks-keyservers.net:80 -r 74F5DE85A506BF64
+sudo pacman-key --keyserver hkps://hkps.pool.sks-keyservers.net:443 -r 74F5DE85A506BF64
+sudo pacman-key --lsign-key 74F5DE85A506BF64
 
 echo "################################################################"
-echo "Downloading the files from github to tmp directory"
-
-rm -rf /tmp/aureola
-
-git clone https://github.com/erikdubois/Aureola /tmp/aureola
-
-# if there is already a folder in tmp, delete or else do nothing
-[ -d ~/.aureola ] && rm -rf ~/.aureola
-mv -f /tmp/aureola ~/.aureola
-
-rm -rf /tmp/aureola
-
-echo "################################################################"
-echo "###################    aureola installed  ######################"
+echo "###                   key trusted                           ####"
 echo "################################################################"
