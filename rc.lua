@@ -122,6 +122,7 @@ local iplayer           = "/opt/google/chrome/google-chrome --profile-directory=
 local od                = "/opt/google/chrome/google-chrome --profile-directory=Default --app-id=eanfgpighcjbbcjnhajepfhfihacoakb"
 local google            = "google-chrome-stable"
 local guitar            = "/opt/google/chrome/google-chrome --profile-directory=Default --app-id=ooagjdegedkpoodebbmjdgfkfeabbkpp"
+local steam             = "/usr/bin/steam-native %U"
 
 -- awesome variables
 awful.util.terminal = terminal
@@ -389,18 +390,15 @@ globalkeys = my_table.join(
         {description = terminal, group = "alt+ctrl"}),
 
     -- alt + ...
-    awful.key({ altkey }, "t", function () awful.util.spawn( "variety -t" ) end,
-        {description = "Wallpaper trash", group = "altkey"}),
-    awful.key({ altkey }, "n", function () awful.util.spawn( "variety -n" ) end,
-        {description = "Wallpaper next", group = "altkey"}),
-    awful.key({ altkey }, "p", function () awful.util.spawn( "variety -p" ) end,
-        {description = "Wallpaper previous", group = "altkey"}),
-    awful.key({ altkey }, "f", function () awful.util.spawn( "variety -f" ) end,
-        {description = "Wallpaper favorite", group = "altkey"}),
-    awful.key({ altkey }, "s", function () awful.util.spawn( "variety --pause" ) end,
-        {description = "Wallpaper pause", group = "altkey"}),
-    awful.key({ altkey }, "g", function () awful.util.spawn( "variety --resume" ) end,
-        {description = "Wallpaper resume", group = "altkey"}),
+    awful.key({ altkey, "Shift"   }, "t", function () awful.spawn.with_shell( "variety -t  && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&" ) end,
+        {description = "Pywal Wallpaper trash", group = "altkey"}),
+    awful.key({ altkey, "Shift"   }, "n", function () awful.spawn.with_shell( "variety -n  && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&" ) end,
+        {description = "Pywal Wallpaper next", group = "altkey"}),
+    awful.key({ altkey, "Shift"   }, "u", function () awful.spawn.with_shell( "wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&" ) end,
+        {description = "Pywal Wallpaper update", group = "altkey"}),
+    awful.key({ altkey, "Shift"   }, "p", function () awful.spawn.with_shell( "variety -p  && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&" ) end,
+        {description = "Pywal Wallpaper previous", group = "altkey"}),
+
     awful.key({ altkey }, "F2", function () awful.util.spawn( "gmrun" ) end,
         {description = "Gmrun", group = "altkey"}),
     awful.key({ altkey }, "F3", function () awful.util.spawn( "xfce4-appfinder" ) end,
@@ -429,14 +427,10 @@ globalkeys = my_table.join(
         {description = "terminal", group = "altkey"}),
     awful.key({ altkey }, "u", function () awful.util.spawn( guitar ) end,
         {description = "ultimate guitar", group = "altkey"}),
+    awful.key({ altkey }, "s", function () awful.util.spawn( steam ) end,
+        {description = "steam native", group = "altkey"}),
 
-    -- screenshots
-    awful.key({ }, "Print", function () awful.util.spawn("scrot 'ArcoLinuxD-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'") end,
-        {description = "Scrot", group = "screenshots"}),
-    awful.key({ modkey1           }, "Print", function () awful.util.spawn( "xfce4-screenshooter" ) end,
-        {description = "Xfce screenshot", group = "screenshots"}),
-    awful.key({ modkey1, "Shift"  }, "Print", function() awful.util.spawn("gnome-screenshot -i") end,
-        {description = "Gnome screenshot", group = "screenshots"}),
+
 
     -- Personal keybindings}}}
 
